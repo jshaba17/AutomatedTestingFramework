@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite name="test_todo.TodoTest-20241110183314" tests="3" file="test_todo.py" time="15.822" timestamp="2024-11-10T18:33:38" failures="0" errors="0" skipped="0">
+		<testcase classname="test_todo.TodoTest" name="test_add_task" time="5.143" timestamp="2024-11-10T18:33:19" file="tests\test_todo.py" line="18">
+			<!--Test adding a new task-->
+			<system-out><![CDATA[Initializing WebDriver...
+WebDriver initialized and page loaded.
+Running test: Add Task
+Task 'Learn Selenium' added successfully.
+Tearing down test: Closing WebDriver...
+WebDriver closed.
+]]></system-out>
+		</testcase>
+		<testcase classname="test_todo.TodoTest" name="test_delete_task" time="5.303" timestamp="2024-11-10T18:33:29" file="tests\test_todo.py" line="35">
+			<!--Test deleting a task-->
+			<system-out><![CDATA[Initializing WebDriver...
+WebDriver initialized and page loaded.
+Running test: Delete Task
+Task 'Clean workspace' deleted successfully.
+Tearing down test: Closing WebDriver...
+WebDriver closed.
+]]></system-out>
+		</testcase>
+		<testcase classname="test_todo.TodoTest" name="test_mark_task_complete" time="5.376" timestamp="2024-11-10T18:33:38" file="tests\test_todo.py" line="26">
+			<!--Test marking a task as complete-->
+			<system-out><![CDATA[Initializing WebDriver...
+WebDriver initialized and page loaded.
+Running test: Mark Task Complete
+Task 'Write test cases' marked as complete.
+Tearing down test: Closing WebDriver...
+WebDriver closed.
+]]></system-out>
+		</testcase>
+	</testsuite>
+</testsuites>
