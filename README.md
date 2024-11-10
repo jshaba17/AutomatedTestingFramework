@@ -1,25 +1,16 @@
 Automated Testing Framework
 This project is an automated testing framework for testing a web application (in this case, a TodoMVC application) using Selenium WebDriver and Python. It demonstrates the use of the Page Object Model (POM) design pattern, which helps organize the test code and makes it more maintainable.
 
-Table of Contents
-Prerequisites
-Project Structure
-Setup Instructions
-Running the Tests
-Generating Reports
-Contributing
-License
-Prerequisites
+
 Before you start, ensure that you have the following installed:
 
-Python 3.x: Make sure Python is installed on your system. You can check by running:
+Make sure Python is installed on your system. You can check by running:
 
-css
-Copy code
+
 python --version
 Selenium: Selenium WebDriver is used for browser automation. It needs to be installed via pip:
 
-Copy code
+
 pip install selenium
 WebDriver: For Selenium to control the browser, you need to install the appropriate WebDriver (e.g., ChromeDriver for Google Chrome).
 
@@ -28,25 +19,11 @@ Place the chromedriver executable in your project directory or in a directory th
 Optional (For XML Reports):
 
 Python's built-in unittest module already supports XML reports, and this project generates reports in XML format.
+
 Project Structure
 Here's an overview of the project directory structure:
 
-bash
-Copy code
-AutomatedTestingFramework/
-│
-├── pages/
-│   ├── base_page.py       # Base Page class with common methods
-│   └── todo_page.py       # Page Object for Todo page
-│
-├── tests/
-│   └── test_todo.py       # Test cases for Todo application
-│
-├── reports/               # Folder where test reports will be saved
-│
-├── requirements.txt       # List of Python dependencies
-├── run_tests.py           # Script to run tests and generate reports
-└── README.md              # Project documentation (this file)
+
 pages/: Contains the Page Object classes that represent different pages of the web application. These classes define elements and actions on the pages.
 tests/: Contains test scripts that use the page objects to perform specific tests on the application.
 reports/: Folder where XML reports will be saved after the tests are executed.
@@ -55,14 +32,12 @@ requirements.txt: Lists all the required dependencies for the project.
 Setup Instructions
 Clone the Repository: Clone this repository to your local machine.
 
-bash
-Copy code
+
 git clone https://github.com/jshaba17/AutomatedTestingFramework.git
 cd AutomatedTestingFramework
 Install Dependencies: Install the required Python packages using pip.
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Download WebDriver:
 
@@ -73,15 +48,13 @@ Update WebDriver Path (if necessary): If you are using a WebDriver in a differen
 Running the Tests
 Run Tests from Command Line: To run the tests, use the unittest module:
 
-bash
-Copy code
+
 python -m unittest discover tests
 This command will discover and execute all the test cases in the tests/ directory.
 
 Run Tests with Report Generation: To run the tests and generate a report, execute the run_tests.py script:
 
-bash
-Copy code
+
 python run_tests.py
 This will run the tests and save the XML reports in the reports/ directory.
 
@@ -89,8 +62,7 @@ Generating Reports
 The test results will be saved in the reports/ directory.
 The results will be saved in XML format as test_report.xml by default.
 Example Output in Console:
-bash
-Copy code
+
 Initializing WebDriver...
 WebDriver initialized and page loaded.
 Running test: Add Task
