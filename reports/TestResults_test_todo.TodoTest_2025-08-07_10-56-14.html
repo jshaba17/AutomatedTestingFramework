@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-08-07 10:56:14</p>
+                <p class='attribute'><strong>Duration: </strong>11.44 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 0, Error: 3</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_todo.TodoTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_add_task</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Initializing WebDriver...
+</p><p style="color:maroon;">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\jurge\Documents\GitHub\AutomatedTestingFramework\tests\test_todo.py", line 12, in setUp
+    self.driver = webdriver.Chrome(service=service)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 69, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_delete_task</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Initializing WebDriver...
+</p><p style="color:maroon;">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\jurge\Documents\GitHub\AutomatedTestingFramework\tests\test_todo.py", line 12, in setUp
+    self.driver = webdriver.Chrome(service=service)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 69, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_mark_task_complete</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Initializing WebDriver...
+</p><p style="color:maroon;">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\jurge\Documents\GitHub\AutomatedTestingFramework\tests\test_todo.py", line 12, in setUp
+    self.driver = webdriver.Chrome(service=service)
+                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 69, in __init__
+    super().__init__(command_executor=executor, options=options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 261, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 454, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\jurge\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 130
+Current browser version is 139.0.7258.66 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6ECFC38A5+3004357]
+	(No symbol) [0x00007FF6ECC59970]
+	(No symbol) [0x00007FF6ECB0582A]
+	(No symbol) [0x00007FF6ECB443F7]
+	(No symbol) [0x00007FF6ECB434C5]
+	(No symbol) [0x00007FF6ECB3D56F]
+	(No symbol) [0x00007FF6ECB38DBE]
+	(No symbol) [0x00007FF6ECB86E01]
+	(No symbol) [0x00007FF6ECB86480]
+	(No symbol) [0x00007FF6ECB7B983]
+	(No symbol) [0x00007FF6ECB47628]
+	(No symbol) [0x00007FF6ECB48791]
+	GetHandleVerifier [0x00007FF6ECFEA00D+3161901]
+	GetHandleVerifier [0x00007FF6ED03E060+3506048]
+	GetHandleVerifier [0x00007FF6ED03400D+3465005]
+	GetHandleVerifier [0x00007FF6ECDB0EEB+830987]
+	(No symbol) [0x00007FF6ECC6467F]
+	(No symbol) [0x00007FF6ECC609D4]
+	(No symbol) [0x00007FF6ECC60B6D]
+	(No symbol) [0x00007FF6ECC50149]
+	BaseThreadInitThunk [0x00007FFD35FBE8D7+23]
+	RtlUserThreadStart [0x00007FFD370FC34C+44]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 11.44 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

@@ -3,11 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from pages.todo_page import TodoPage
 import os
-import xmlrunner
+import HtmlTestRunner  
 
 class TodoTest(unittest.TestCase):
     def setUp(self):
-    
         print("Initializing WebDriver...")
         service = Service(executable_path="chromedriver.exe")
         self.driver = webdriver.Chrome(service=service)
@@ -52,15 +51,13 @@ if __name__ == "__main__":
         os.makedirs(report_dir)
         print("Reports directory created.")
 
-    report_file = os.path.join(report_dir, "TestReport.xml")
+    print(f"Starting test run... HTML report will be saved to: {report_dir}")
 
-    print(f"Starting test run... Report will be saved to: {report_file}")
+    # Discover tests in the "tests" folder and run them
+suite = unittest.defaultTestLoader.discover('tests', pattern='test_*.py')
 
-    suite = unittest.TestLoader().loadTestsFromTestCase(TodoTest)
-    
-    with open(report_file, "wb") as output:
-        print(f"Generating report to {report_file}...")
-        runner = xmlrunner.XMLTestRunner(output=output)
-        runner.run(suite)
+# Run the tests and generate an HTML report
+runner = HtmlTestRunner.HTMLTestRunner(output='reports')
+runner.run(suite)
 
-    print("Test run complete. Report generated.")
+print("Test run complete. HTML report generated.")
